@@ -148,6 +148,8 @@ configure_file(
   ${CMAKE_CURRENT_BINARY_DIR}/doc/style/dtd/entities.ent
   @ONLY)
 
+set(BUILD_SHARED_LIBS off)
+
 # Generate pkg-config file
 set(pkgconfig-dir "${CMAKE_INSTALL_LIBDIR}/pkgconfig" CACHE STRING "pkg-config installation directory (default ${CMAKE_INSTALL_LIBDIR}/pkgconfig)")
 set(PKGCONFIGDIR "${pkgconfig-dir}")
