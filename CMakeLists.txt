@@ -148,7 +148,9 @@ configure_file(
   ${CMAKE_CURRENT_BINARY_DIR}/doc/style/dtd/entities.ent
   @ONLY)
 
-set(BUILD_SHARED_LIBS off)
+if(NOT DEFINED BUILD_SHARED_LIBS)
+  set(BUILD_SHARED_LIBS off)
+endif(NOT DEFINED BUILD_SHARED_LIBS)
 
 # Generate pkg-config file
 set(pkgconfig-dir "${CMAKE_INSTALL_LIBDIR}/pkgconfig" CACHE STRING "pkg-config installation directory (default ${CMAKE_INSTALL_LIBDIR}/pkgconfig)")
