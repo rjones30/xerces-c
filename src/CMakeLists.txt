@@ -1272,7 +1272,7 @@ add_library(xerces-c
   ${libxerces_c_SOURCES}
   ${libxerces_c_RESOURCES})
 target_link_libraries(xerces-c PRIVATE ${libxerces_c_DEPS})
-if(XERCES_USE_NETACCESSOR_CURL)
+if(XERCES_USE_NETACCESSOR_CURL AND NOT APPLE)
   target_include_directories(xerces-c SYSTEM PRIVATE ${CURL_INCLUDE_DIRS})
 endif()
 
